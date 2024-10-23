@@ -16,10 +16,10 @@ export const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
-  const [emailError, setEmailError] = useState(""); // Состояние для ошибки email
-  const [newPasswordError, setNewPasswordError] = useState(""); // Состояние для ошибки нового пароля
-  const [repeatPasswordError, setRepeatPasswordError] = useState(""); // Состояние для ошибки повторного пароля
-  const [generalMessage, setGeneralMessage] = useState(""); // Сообщение общего успеха или ошибки
+  const [emailError, setEmailError] = useState(""); 
+  const [newPasswordError, setNewPasswordError] = useState(""); 
+  const [repeatPasswordError, setRepeatPasswordError] = useState(""); 
+  const [generalMessage, setGeneralMessage] = useState(""); 
   const navigate = useNavigate();
 
   const validatePassword = (password: string) => {
@@ -38,19 +38,19 @@ export const ForgotPasswordPage = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Сбрасываем предыдущие ошибки
+    
     setEmailError("");
     setNewPasswordError("");
     setRepeatPasswordError("");
     setGeneralMessage("");
 
-    // Проверка на пустое поле email
+    
     if (!email) {
       setEmailError("Введите номер телефона или email.");
       return;
     }
 
-    // Валидация нового пароля
+    
     const passwordError = validatePassword(newPassword);
     if (passwordError) {
       setNewPasswordError(passwordError);
@@ -63,7 +63,7 @@ export const ForgotPasswordPage = () => {
       return;
     }
 
-    // Получаем пользователей из Local Storage
+    
     const existingUsers: User[] = JSON.parse(localStorage.getItem("users") || "[]");
 
     // Проверка на существование пользователя по email
@@ -95,15 +95,14 @@ export const ForgotPasswordPage = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          {emailError && <p className="error">{emailError}</p>} {/* Сообщение об ошибке под полем email */}
-
+          {emailError && <p className="error">{emailError}</p>} 
           <Input
             type="password"
             placeholder="Новый пароль"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
           />
-          {newPasswordError && <p className="error">{newPasswordError}</p>} {/* Сообщение об ошибке под полем нового пароля */}
+          {newPasswordError && <p className="error">{newPasswordError}</p>} 
 
           <Input
             type="password"
@@ -111,12 +110,12 @@ export const ForgotPasswordPage = () => {
             value={repeatPassword}
             onChange={(e) => setRepeatPassword(e.target.value)}
           />
-          {repeatPasswordError && <p className="error">{repeatPasswordError}</p>} {/* Сообщение об ошибке под полем повторного пароля */}
+          {repeatPasswordError && <p className="error">{repeatPasswordError}</p>} 
 
           <StyledButton type="submit">Отправить</StyledButton>
         </form>
 
-        {generalMessage && <p>{generalMessage}</p>} {/* Общие сообщения (успех или ошибка) */}
+        {generalMessage && <p>{generalMessage}</p>} 
         <LinkText text="Вернуться к авторизации" link="/" />
       </StyleForgotPasswordPage>
     </Container>

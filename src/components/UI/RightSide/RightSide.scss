@@ -1,0 +1,140 @@
+// .RightSide {
+//     grid-area: R;
+  
+//     .List {
+//       margin-bottom: 20px;
+  
+//       box-shadow: 0 0 10px var(--light-gray);
+//       background-color: var(--elems-bgc);
+//       border-radius: 20px;
+//       padding: calc(1vw + 11px);
+  
+//       &__title {
+//         margin-bottom: 20px;
+  
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//       }
+//     }
+  
+//     .WhatsNew {
+//       box-shadow: 0 0 10px var(--light-gray);
+//       background-color: var(--elems-bgc);
+//       border-radius: 20px;
+//       padding: 20px;
+//       margin-bottom: 20px;
+  
+//       display: flex;
+//       align-items: center;
+//       gap: 10px;
+  
+//       img {
+//         flex: 0 0 40px;
+//         border-radius: 50%;
+//         height: 40px;
+//         object-fit: cover;
+//       }
+  
+//       input {
+//         flex: 1 1 auto;
+//         background: transparent;
+//       }
+  
+//       .icons-wrapper {
+//         flex: 0 1 20%;
+//         display: flex;
+//         justify-content: flex-end;
+//         align-items: center;
+//         gap: 20px;
+  
+//         .icon {
+//           cursor: pointer;
+//           flex: 0 0 24px;
+//           width: 24px;
+//           border: 1px solid transparent;
+//           border-radius: 10px;
+//           fill: var(--prime-color);
+//           padding: 10px;
+//           box-sizing: content-box;
+  
+//           transition: 200ms;
+  
+//           &:hover {
+//             border-color: var(--light-gray);
+//             background-color: var(--bgc);
+//           }
+  
+//           &:active {
+//             transition: 100ms;
+//             background-color: var(--prime-color);
+//             fill: white;
+//           }
+//         }
+//       }
+//     }
+  
+//     .History {
+//       position: relative;
+//       overflow: visible;
+//       margin-bottom: 20px;
+  
+//       &__wrapper {
+//         display: flex;
+//         gap: 6px;
+//         overflow: hidden;
+//       }
+  
+//       .icon-slider-button {
+//         cursor: pointer;
+//         position: absolute;
+//         top: 50%;
+//         right: -20px;
+//         transform: translateY(-50%);
+//         z-index: 2;
+  
+//         width: 40px;
+//         height: 40px;
+//         transition: 200ms;
+  
+//         &:hover {
+//           scale: 1.1;
+//           filter: drop-shadow(0 0 5px var(--dark-gray));
+//         }
+  
+//         &.left {
+//           right: initial;
+//           left: -20px;
+//         }
+  
+//         &.right {
+//           right: -20px;
+//         }
+//       }
+  
+//       .History__item {
+//         cursor: pointer;
+//         border-radius: 15px;
+//         flex: 0 0 90px;
+//         width: 90px;
+//         height: 90px;
+//         position: relative;
+  
+//         img {
+//           border-radius: 15px;
+//           width: 100%;
+//           height: 100%;
+//           object-fit: cover;
+//         }
+  
+//         .History__desc {
+//           position: absolute;
+//           bottom: 10px;
+//           left: 50%;
+//           transform: translateX(-50%);
+//           text-align: center;
+//           color: white;
+//         }
+//       }
+//     }
+//   }
